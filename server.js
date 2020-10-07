@@ -1,11 +1,12 @@
 const express = require('express');
 
+const favicon = require('serve-favicon');
 const path = require('path');
 const app = express();
 const fetch = require('node-fetch');
-const favicon = require('express-favicon');
 
-app.use(favicon(__dirname + '/public/favicon.png'));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+
 
 app.use(express.static(__dirname +'/build'));
 //fetch info when you type a username or fetch chartdata
