@@ -47,8 +47,8 @@ app.get("*" , (req ,res) => {
   res.sendFile(path.join(__dirname, '/build', 'index.html'))
 })
 
-const PORT = process.env.PORT || 8080;
+let port = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
+app.listen(port, () => {
     console.log(`Started listening with CORS on port ${PORT}`);
   });
