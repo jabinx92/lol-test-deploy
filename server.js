@@ -50,5 +50,5 @@ app.get("*" , (req ,res) => {
 let port = process.env.PORT || 8080;
 
 app.listen(port, () => {
-    console.log(`Started listening with CORS on port ${PORT}`);
+    console.log(`Started listening with CORS on port ${port}`);
   });

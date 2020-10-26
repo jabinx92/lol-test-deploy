@@ -14,7 +14,6 @@ const StyledContainer = styled.div`
   background-color: ${colors.black};
   background-image: linear-gradient(${colors.black} 0%, ${colors.darkGrey} 100%);
   color: ${colors.offWhite};
-  height: 100vh;
 
   form {
     background-color: transparent;
@@ -67,7 +66,7 @@ const EnterName = (props) => {
               <label>
                   <img src={lolpng} alt='LeagueLogo'/>
                   <label htmlFor="username">Enter League of Legends Username:</label>
-                  <input type="text" name="name" placeholder="Input Here - try 'huhi'" spellCheck="false" onChange={props.onChange}/>
+                  <input type="text" name="name" placeholder="Try - 'huhi'" spellCheck="false" onChange={props.onChange}/>
               </label>
                   <input type="submit" value="Submit" />
           </form>
