@@ -20,7 +20,7 @@ class FindSummoner extends Component {
         puuid: null,
         name: null,
         profileIconId: null,
-        summonerLevel: null,
+        totalMasteryScore: null,
         test: null,
       };
     
@@ -35,6 +35,7 @@ class FindSummoner extends Component {
         .then(res => res.json())
         .then(
           (result) => {
+            console.log('API Resultz:', result);
             this.setState({
               isLoaded: true,
               id: result.id,
@@ -42,7 +43,7 @@ class FindSummoner extends Component {
               puuid: result.puuid,
               name: result.name,
               profileIconId: result.profileIconId,
-              summonerLevel: result.summonerLevel,
+              totalMasteryScore: result.totalMasteryScore,
               allInfo: result
             });
           },
@@ -64,7 +65,7 @@ class FindSummoner extends Component {
   
   
   render() {
-    const { error, isLoaded, id, name, profileIconId, summonerLevel } = this.state;
+    const { error, isLoaded, id, name, profileIconId, totalMasteryScore } = this.state;
     if (error) {
       return <div>{error.message}</div>;
     } else if (!isLoaded) {
@@ -87,7 +88,7 @@ class FindSummoner extends Component {
               <div className="info">
                   <span className="info__item">
                     <Octicon icon={Rocket} size="small" />
-                    Level: {summonerLevel}
+                    Level: {totalMasteryScore}
                   </span>
 
                   <span className="info__item">
