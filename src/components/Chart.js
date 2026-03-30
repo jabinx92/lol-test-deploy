@@ -45,7 +45,7 @@ class Chart extends Component {
     } else if(isLoaded) {
         return (
             <div className="chart">
-            <ChartData accountId={this.state.stats.accountId} />
+            <ChartData accountId={this.state.stats.puuid} />
             </div>
         )
         }
