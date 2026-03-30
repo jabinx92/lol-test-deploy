@@ -34,5 +34,3 @@ class App extends Component {
 }
 
 export default App;
-
-//start test commit
